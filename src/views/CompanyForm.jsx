@@ -1,25 +1,24 @@
 import React, { useState } from "react";
-import { Button, Form, Stack, Alert } from "react-bootstrap";
+import { Button, Form, Stack } from "react-bootstrap";
 import { useForm } from "react-hook-form";
 import Header from "../components/Header";
 import FadeTransition from "../transitions/FadeTransition";
+import { ErrorMessage } from "@hookform/error-message";
 
 const UserForm = () => {
   const [data, setData] = useState(undefined);
-  const [show, setShow] = useState(true);
   const {
     register,
-    handleSubmit,
-    formState: { errors }
-  } = useForm();
+    formState: { errors },
+    handleSubmit
+  } = useForm({
+    criteriaMode: "all"
+  });
 
   const onSubmit = (data) => {
     if (data) {
       setData(data);
       console.log(data);
-    } else {
-      setData(false);
-      console.log(errors);
     }
   };
 
@@ -28,48 +27,121 @@ const UserForm = () => {
       <div className="container _container mt-2 p-3">
         <Stack gap={2}>
           <div className="p-2">
-            <Header title={"PlexusTech"} />
+            <Header title={"Solicitud de alta"} />
           </div>
           <div className="p-5 mt-5 form">
-            <h4 className="mb-3">FORMULARIO 2/2</h4>
+            <h4 className="mt-3">FORMULARIO 2/2</h4>
             <Form onSubmit={handleSubmit(onSubmit)} className="form">
               <Form.Group>
                 <Form.Control
-                  className="mb-3"
+                  className="mt-3"
                   type="text"
                   placeholder="Empresa"
-                  {...register("Empresa", { required: true })}
+                  {...register("Empresa", {
+                    required: "Este campo es requerido."
+                  })}
+                />
+                <ErrorMessage
+                  errors={errors}
+                  name="Empresa"
+                  render={({ messages }) =>
+                    messages &&
+                    Object.entries(messages).map(([type, message]) => (
+                      <p className="error" key={type}>
+                        {message}
+                      </p>
+                    ))
+                  }
                 />
                 <Form.Control
-                  className="mb-3"
+                  className="mt-3"
                   type="text"
                   placeholder="Email"
-                  {...register("Email", { required: true, pattern: /^\S+@\S+$/i })}
+                  {...register("Email", {
+                    required: "Este campo es requerido.",
+                    pattern: {
+                      value: /^\S+@\S+$/i,
+                      message: "Este campo debe tener formato de correo electrónico.",
+                      maxLength: {
+                        value: 60,
+                        message: "Este campo debe tener máximo 60 caracteres"
+                      }
+                    }
+                  })}
+                />
+                <ErrorMessage
+                  errors={errors}
+                  name="Email"
+                  render={({ messages }) =>
+                    messages &&
+                    Object.entries(messages).map(([type, message]) => (
+                      <p className="error" key={type}>
+                        {message}
+                      </p>
+                    ))
+                  }
                 />
                 <Form.Control
-                  className="mb-3"
+                  className="mt-3"
                   placeholder="Número de teléfono"
-                  {...register("Mobile number", { required: true, minLength: 6, maxLength: 12 })}
+                  {...register("Numero de telefono", {
+                    required: "Este campo es requerido.",
+                    pattern: {
+                      value: /^[0-9]+$/,
+                      message: "Solo pueden introducirse números en este campo."
+                    },
+                    minLength: {
+                      value: 6,
+                      message: "Este campo debe tener mínimo 6 caracteres"
+                    },
+                    maxLength: {
+                      value: 12,
+                      message: "Este campo debe tener máximo 12 caracteres"
+                    }
+                  })}
                 />
-                <Button variant="primary" type="submit">
+                <ErrorMessage
+                  errors={errors}
+                  name="Numero de telefono"
+                  render={({ messages }) =>
+                    messages &&
+                    Object.entries(messages).map(([type, message]) => (
+                      <p className="error" key={type}>
+                        {message}
+                      </p>
+                    ))
+                  }
+                />
+                <Form.Control
+                  className="mt-3"
+                  placeholder="Descripción"
+                  {...register("Descripcion", {
+                    required: "Este campo es requerido.",
+                    maxLength: {
+                      value: 120,
+                      message: "Este campo debe tener máximo 120 caracteres."
+                    }
+                  })}
+                />
+                <ErrorMessage
+                  errors={errors}
+                  name="Descripcion"
+                  render={({ messages }) =>
+                    messages &&
+                    Object.entries(messages).map(([type, message]) => (
+                      <p className="error" key={type}>
+                        {message}
+                      </p>
+                    ))
+                  }
+                />
+                <Button className="mt-3" variant="primary" type="submit">
                   SUBMIT
                 </Button>
               </Form.Group>
             </Form>
           </div>
         </Stack>
-        {data === false && (
-          <Alert show={show} variant="success">
-            <Alert.Heading>Error</Alert.Heading>
-            <p>Introduce correctamente los datos.</p>
-            <hr />
-            <div className="d-flex justify-content-end">
-              <Button onClick={() => setShow(false)} variant="outline-success">
-                Close me
-              </Button>
-            </div>
-          </Alert>
-        )}
       </div>
     </FadeTransition>
   );
