@@ -1,8 +1,13 @@
+#root {
+    height: 98.75vh;
+ }
+
 .form {
     display: flex;
     flex-direction: column;
     align-items: center;
-}
-._container{
-    
-}
+ } 
+
+ ._container {
+    height: 100%;
+ }
