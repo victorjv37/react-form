@@ -1,7 +1,7 @@
 import React from "react";
 
-const Header = ({ title }) => {
-  return <h3>{title}</h3>;
+const Header = ({ title, reference }) => {
+  return <h3 ref={reference}>{title}</h3>;
 };
 
 export default Header;
