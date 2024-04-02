@@ -1,27 +1,58 @@
 #root {
-    height: 98.75vh;
- }
+   height: 98.75vh;
+   font-family: serif;
+}
+
+.table {
+   width: 75%;
+}
+
+th, td {
+   border: 1px solid black;
+}
+
+tr {
+   border-top: 1px solid black;
+}
+
+.button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 10px;
+   border: 1px solid #000;
+   color: white;
+   background-color: #04a1e4;
+   padding: 10px;
+   font-family: serif;
+   font-size: 20px;
+}
 
 .form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
- }
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
 
 .centered {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
- } 
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
 
- ._container {
-    height: 100%;
- }
- 
- .error {
-    font-size: 0.75em;
-    color: red;
-    padding: 0.25px;
-    margin: 0.25px;
-    max-width: 27vh;
- }
+._container {
+   height: 100%;
+}
+
+.error {
+   font-size: 0.75em;
+   color: red;
+   padding: 0.25px;
+   margin: 0.25px;
+   max-width: 27vh;
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+}
