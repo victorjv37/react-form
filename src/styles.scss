@@ -1,5 +1,4 @@
 #root {
-   height: 98.75vh;
    font-family: serif;
 }
 
@@ -40,7 +39,7 @@
 .mainContainer {
    display: flex;
    justify-content: center;
-   margin-top: 160px;
+   margin-top: 35px;
 }
 
 .buttonContainer {
@@ -71,11 +70,15 @@
 }
 
 .tituloDatosBancarios {
-   width: 23%;
+   width: 1%;
 }
 
 .displayNone {
    display: none;
+}
+
+.caeData {
+   width: 10px;
 }
 
 input.datosBancarios {
@@ -93,13 +96,21 @@ input.direccionFacturacion {
 
 #counter {
    position: relative;
-   right: 37px;
+   right: 35px;
    font-size: 18px;
    color: #04a1e4;
 }
 
 #datosBancarios {
    padding: 0%;
+}
+
+#cae {
+   padding: 0px;
+}
+
+#caeRows {
+   height: 33px;
 }
 
 .noBorderTop {
@@ -112,4 +123,8 @@ input.direccionFacturacion {
 
 .noBorderRight {
    border-right: 0px;
+}
+
+.noBorderLeft {
+   border-left: 0px;
 }

@@ -91,7 +91,9 @@ const Form3 = () => {
                 trailColor: "#black"
               })}
             />
-            <span id="counter">3/4</span>
+            <span id="counter" style={{ right: "38px" }}>
+              3/4
+            </span>
           </span>
         </div>
         <div>
@@ -105,17 +107,18 @@ const Form3 = () => {
                 </th>
               </tr>
               <tr className="tr">
-                <th className="th"> </th>
-                <th className="th">NOMBRE DE LA PERSONA*</th>
-                <th className="th">TELÉFONO*</th>
-                <th className="th">EMAIL*</th>
+                <th className="th padding"> </th>
+                <th className="th padding">NOMBRE DE LA PERSONA*</th>
+                <th className="th padding">TELÉFONO*</th>
+                <th className="th padding">EMAIL*</th>
               </tr>
               <tbody className="tbody">
                 <tr className="tr">
                   <td className="td">COMERCIAL*</td>
                   <td className="td">
-                    <label htmlFor="comercialNombre">. </label>
+                    <label htmlFor="comercialNombre"></label>
                     <input
+                      className="input"
                       required
                       type="text"
                       id="comercialNombre"
@@ -125,8 +128,9 @@ const Form3 = () => {
                     />
                   </td>
                   <td className="td">
-                    <label htmlFor="comercialTelefono">. </label>
+                    <label htmlFor="comercialTelefono"></label>
                     <input
+                      className="input"
                       required
                       type="text"
                       id="comercialTelefono"
@@ -136,8 +140,9 @@ const Form3 = () => {
                     />
                   </td>
                   <td className="td">
-                    <label htmlFor="comercialEmail">. </label>
+                    <label htmlFor="comercialEmail"></label>
                     <input
+                      className="input"
                       required
                       type="text"
                       id="comercialEmail"
@@ -150,8 +155,9 @@ const Form3 = () => {
                 <tr className="tr">
                   <td className="td">RECEPCIÓN PEDIDOS*</td>
                   <td className="td">
-                    <label htmlFor="recPedidosNombre">. </label>
+                    <label htmlFor="recPedidosNombre"></label>
                     <input
+                      className="input"
                       required
                       type="text"
                       id="recPedidosNombre"
@@ -161,8 +167,9 @@ const Form3 = () => {
                     />
                   </td>
                   <td className="td">
-                    <label htmlFor="recPedidosTelefono">. </label>
+                    <label htmlFor="recPedidosTelefono"></label>
                     <input
+                      className="input"
                       required
                       type="text"
                       id="recPedidosTelefono"
@@ -172,8 +179,9 @@ const Form3 = () => {
                     />
                   </td>
                   <td className="td">
-                    <label htmlFor="recPedidosEmail">. </label>
+                    <label htmlFor="recPedidosEmail"></label>
                     <input
+                      className="input"
                       required
                       type="text"
                       id="recPedidosEmail"
@@ -186,8 +194,9 @@ const Form3 = () => {
                 <tr className="tr">
                   <td className="td">RECEPCIÓN PREVISIONES</td>
                   <td className="td">
-                    <label htmlFor="recPrevisionesNombre">. </label>
+                    <label htmlFor="recPrevisionesNombre"></label>
                     <input
+                      className="input"
                       type="text"
                       id="recPrevisionesNombre"
                       name="recPrevisionesNombre"
@@ -196,8 +205,9 @@ const Form3 = () => {
                     />
                   </td>
                   <td className="td">
-                    <label htmlFor="recPrevisionesTelefono">. </label>
+                    <label htmlFor="recPrevisionesTelefono"></label>
                     <input
+                      className="input"
                       type="text"
                       id="recPrevisionesTelefono"
                       name="recPrevisionesTelefono"
@@ -206,8 +216,9 @@ const Form3 = () => {
                     />
                   </td>
                   <td className="td">
-                    <label htmlFor="recPrevisionesEmail">. </label>
+                    <label htmlFor="recPrevisionesEmail"></label>
                     <input
+                      className="input"
                       type="text"
                       id="recPrevisionesEmail"
                       name="recPrevisionesEmail"
@@ -219,8 +230,9 @@ const Form3 = () => {
                 <tr className="tr">
                   <td className="td">CALIDAD*</td>
                   <td className="td">
-                    <label htmlFor="calidadNombre">. </label>
+                    <label htmlFor="calidadNombre"></label>
                     <input
+                      className="input"
                       required
                       type="text"
                       id="calidadNombre"
@@ -230,8 +242,9 @@ const Form3 = () => {
                     />
                   </td>
                   <td className="td">
-                    <label htmlFor="calidadTelefono">. </label>
+                    <label htmlFor="calidadTelefono"></label>
                     <input
+                      className="input"
                       required
                       type="text"
                       id="calidadTelefono"
@@ -241,8 +254,9 @@ const Form3 = () => {
                     />
                   </td>
                   <td className="td">
-                    <label htmlFor="calidadEmail">. </label>
+                    <label htmlFor="calidadEmail"></label>
                     <input
+                      className="input"
                       required
                       type="text"
                       id="calidadEmail"
@@ -255,8 +269,9 @@ const Form3 = () => {
                 <tr className="tr">
                   <td className="td">GERENTE</td>
                   <td className="td">
-                    <label htmlFor="gerenteNombre">. </label>
+                    <label htmlFor="gerenteNombre"></label>
                     <input
+                      className="input"
                       type="text"
                       id="gerenteNombre"
                       name="gerenteNombre"
@@ -265,8 +280,9 @@ const Form3 = () => {
                     />
                   </td>
                   <td className="td">
-                    <label htmlFor="gerenteTelefono">. </label>
+                    <label htmlFor="gerenteTelefono"></label>
                     <input
+                      className="input"
                       type="text"
                       id="gerenteTelefono"
                       name="gerenteTelefono"
@@ -275,8 +291,9 @@ const Form3 = () => {
                     />
                   </td>
                   <td className="td">
-                    <label htmlFor="gerenteEmail">. </label>
+                    <label htmlFor="gerenteEmail"></label>
                     <input
+                      className="input"
                       type="text"
                       id="gerenteEmail"
                       name="gerenteEmail"
@@ -288,8 +305,9 @@ const Form3 = () => {
                 <tr className="tr">
                   <td className="td">ADMINISTRACIÓN / FACTURACIÓN*</td>
                   <td className="td">
-                    <label htmlFor="adminFactNombre">. </label>
+                    <label htmlFor="adminFactNombre"></label>
                     <input
+                      className="input"
                       required
                       type="text"
                       id="adminFactNombre"
@@ -299,8 +317,9 @@ const Form3 = () => {
                     />
                   </td>
                   <td className="td">
-                    <label htmlFor="adminFactTelefono">. </label>
+                    <label htmlFor="adminFactTelefono"></label>
                     <input
+                      className="input"
                       required
                       type="text"
                       id="adminFactTelefono"
@@ -310,8 +329,9 @@ const Form3 = () => {
                     />
                   </td>
                   <td className="td">
-                    <label htmlFor="adminFactEmail">. </label>
+                    <label htmlFor="adminFactEmail"></label>
                     <input
+                      className="input"
                       required
                       type="text"
                       id="adminFactEmail"
@@ -324,8 +344,9 @@ const Form3 = () => {
                 <tr className="tr">
                   <td className="td">COMPRAS</td>
                   <td className="td">
-                    <label htmlFor="comprasNombre">. </label>
+                    <label htmlFor="comprasNombre"></label>
                     <input
+                      className="input"
                       type="text"
                       id="comprasNombre"
                       name="comprasNombre"
@@ -334,8 +355,9 @@ const Form3 = () => {
                     />
                   </td>
                   <td className="td">
-                    <label htmlFor="comprasTelefono">. </label>
+                    <label htmlFor="comprasTelefono"></label>
                     <input
+                      className="input"
                       type="text"
                       id="comprasTelefono"
                       name="comprasTelefono"
@@ -344,8 +366,9 @@ const Form3 = () => {
                     />
                   </td>
                   <td className="td">
-                    <label htmlFor="comprasEmail">. </label>
+                    <label htmlFor="comprasEmail"></label>
                     <input
+                      className="input"
                       type="text"
                       id="comprasEmail"
                       name="comprasEmail"
@@ -357,8 +380,9 @@ const Form3 = () => {
                 <tr className="tr">
                   <td className="td">PRODUCTO</td>
                   <td className="td">
-                    <label htmlFor="productoNombre">. </label>
+                    <label htmlFor="productoNombre"></label>
                     <input
+                      className="input"
                       type="text"
                       id="productoNombre"
                       name="productoNombre"
@@ -367,8 +391,9 @@ const Form3 = () => {
                     />
                   </td>
                   <td className="td">
-                    <label htmlFor="productoTelefono">. </label>
+                    <label htmlFor="productoTelefono"></label>
                     <input
+                      className="input"
                       type="text"
                       id="productoTelefono"
                       name="productoTelefono"
@@ -377,8 +402,9 @@ const Form3 = () => {
                     />
                   </td>
                   <td className="td">
-                    <label htmlFor="productoEmail">. </label>
+                    <label htmlFor="productoEmail"></label>
                     <input
+                      className="input"
                       type="text"
                       id="productoEmail"
                       name="productoEmail"
@@ -388,14 +414,15 @@ const Form3 = () => {
                   </td>
                 </tr>
                 <tr className="tr">
-                  <td colSpan={1}>
+                  <td className="td" colSpan={1}>
                     <label htmlFor="cae">CAE, COORDINACIÓN ACTIVIDADES EMPRESAIALES</label>
                   </td>
-                  <td colSpan={3}>
-                    <tr style={{ height: "33.5px" }}>
-                      <td style={{ borderRight: "1px solid #000" }}>
-                        <label htmlFor="caeNombre1">. </label>
+                  <td colSpan={3} id="cae">
+                    <tr className="tr noBorderLeft noBorderTop noBorderRight" id="caeRows">
+                      <td className="td noBorderLeft noBorderTop noBorderBottom caeData">
+                        <label htmlFor="caeNombre1"></label>
                         <input
+                          className="input"
                           type="text"
                           id="caeNombre1"
                           name="caeNombre1"
@@ -403,9 +430,10 @@ const Form3 = () => {
                           onChange={handleChange}
                         />
                       </td>
-                      <td>
-                        <label htmlFor="caeTelefono1">. </label>
+                      <td className="td noBorderLeft noBorderTop noBorderBottom caeData">
+                        <label htmlFor="caeTelefono1"></label>
                         <input
+                          className="input"
                           type="text"
                           id="caeTelefono1"
                           name="caeTelefono1"
@@ -413,9 +441,10 @@ const Form3 = () => {
                           onChange={handleChange}
                         />
                       </td>
-                      <td className="td">
-                        <label htmlFor="caeEmail1">. </label>
+                      <td className="td noBorderRight noBorderTop noBorderBottom caeData">
+                        <label htmlFor="caeEmail1"></label>
                         <input
+                          className="input"
                           type="text"
                           id="caeEmail1"
                           name="caeEmail1"
@@ -424,10 +453,11 @@ const Form3 = () => {
                         />
                       </td>
                     </tr>
-                    <tr>
+                    <tr className="tr noBorderLeft noBorderBottom noBorderRight" id="caeRows">
                       <td>
-                        <label htmlFor="caeNombre2">. </label>
+                        <label htmlFor="caeNombre2"></label>
                         <input
+                          className="input"
                           type="text"
                           id="caeNombre2"
                           name="caeNombre2"
@@ -436,8 +466,9 @@ const Form3 = () => {
                         />
                       </td>
                       <td>
-                        <label htmlFor="caeTelefono2">. </label>
+                        <label htmlFor="caeTelefono2"></label>
                         <input
+                          className="input"
                           type="text"
                           id="caeTelefono2"
                           name="caeTelefono2"
@@ -446,8 +477,9 @@ const Form3 = () => {
                         />
                       </td>
                       <td>
-                        <label htmlFor="caeEmail2">. </label>
+                        <label htmlFor="caeEmail2"></label>
                         <input
+                          className="input"
                           type="text"
                           id="caeEmail2"
                           name="caeEmail2"

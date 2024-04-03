@@ -79,7 +79,9 @@ const Form2 = () => {
                   </label>
                 </th>
                 <tr className="tr">
-                  <td className="tituloDatosBancarios">DATOS BANCARIOS</td>
+                  <td className="tituloDatosBancarios" style={{ paddingRight: "6px" }}>
+                    DATOS BANCARIOS
+                  </td>
                   <tr className="tr datosBancarios noBorderTop noBorderRight">
                     <td className="td tituloDatosBancarios padding noBorderTop">
                       <label htmlFor="entidad">ENTIDAD</label>

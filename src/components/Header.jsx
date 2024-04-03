@@ -1,6 +1,6 @@
 import React from "react";
 
-const Header = ({ title, reference }) => {
+const Header = () => {
   return (
     <img
       style={{ height: "96px" }}

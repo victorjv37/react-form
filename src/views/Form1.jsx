@@ -70,16 +70,7 @@ const Form1 = () => {
                 trailColor: "#black"
               })}
             />
-            <span
-              style={{
-                position: "relative",
-                right: "37px",
-                fontSize: "18px",
-                color: "#04a1e4"
-              }}
-            >
-              1/4
-            </span>
+            <span id="counter">1/4</span>
           </span>
         </div>
         <div>
