@@ -42,102 +42,49 @@ const Form2 = () => {
   };
 
   return (
-    <div
-      style={{
-        margin: "10px",
-        minHeight: "65vh"
-      }}
-    >
-      <div style={{ display: "flex", justifyContent: "space-between" }}>
-        <Header />
-        <span
-          style={{
-            width: "75px",
-            height: "75px",
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            fontFamily: "serif"
-          }}
-        >
-          <CircularProgressbar
-            value={50}
-            text={""}
-            styles={buildStyles({
-              textSize: "30px",
-              pathTransitionDuration: 0.5,
-              pathColor: "#04a1e4",
-              textColor: "#04a1e4",
-              trailColor: "#black"
-            })}
-          />
-          <span style={{ position: "relative", right: "37px", fontSize: "18px", color: "#04a1e4" }}>
-            2/4
+    <div className="mainContainer">
+      <div id="container">
+        <div className="header">
+          <Header />
+          <span
+            style={{
+              width: "75px",
+              height: "75px",
+              display: "flex",
+              justifyContent: "center",
+              alignItems: "center"
+            }}
+          >
+            <CircularProgressbar
+              value={50}
+              text={""}
+              styles={buildStyles({
+                textSize: "30px",
+                pathTransitionDuration: 0.5,
+                pathColor: "#04a1e4",
+                textColor: "#04a1e4",
+                trailColor: "#black"
+              })}
+            />
+            <span id="counter">2/4</span>
           </span>
-        </span>
-      </div>
-      <div
-        style={{
-          fontFamily: "serif",
-          fontSize: "16px"
-        }}
-      >
-        <form onSubmit={handleSubmit} onInvalid={handleInvalid}>
-          <table style={{ borderCollapse: "collapse", width: "100%" }}>
-            <thead>
-              <tr>
-                <th
-                  colSpan={4}
-                  style={{
-                    border: "1px solid #000",
-                    padding: "8px",
-                    backgroundColor: "#04a1e4",
-                    color: "white"
-                  }}
-                >
-                  <label htmlFor="titulo">
+        </div>
+        <div>
+          <form onSubmit={handleSubmit} onInvalid={handleInvalid}>
+            <table className="table" style={{ marginBottom: "0px" }}>
+              <tbody className="tbody">
+                <th colSpan={4} className="tableHeader">
+                  <label style={{ backgroundColor: "#04a1e4", color: "white" }} htmlFor="titulo">
                     <strong>2. CONDICIONES DE PAGO Y FACTURACIÓN*</strong>
                   </label>
                 </th>
-              </tr>
-              <tr style={{ border: "1px solid #000", padding: "8px" }}>
-                <td colSpan={1} style={{ border: "1px solid #000", padding: "8px", width: "25%" }}>
-                  PAGO A: 60 días
-                </td>
-                <td colSpan={1} style={{ border: "1px solid #000", padding: "8px", width: "25%" }}>
-                  TRANSFERENCIA
-                </td>
-                <td colSpan={1} style={{ border: "1px solid #000", padding: "8px", width: "25%" }}>
-                  MONEDA / DIVISA
-                </td>
-                <td colSpan={1} style={{ border: "1px solid #000", padding: "8px", width: "25%" }}>
-                  €
-                </td>
-              </tr>
-              <tr>
-                <td colSpan={4} style={{ border: "1px solid #000", padding: "8px" }}>
-                  DÍAS DE PAGO: 1 y 15
-                </td>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td colSpan={1} style={{ border: "1px solid #000", padding: "8px", width: "23%" }}>
-                  DATOS BANCARIOS
-                </td>
-                <td colSpan={3} style={{ border: "1px solid #000" }}>
-                  <tr>
-                    <td style={{ padding: "8px", borderBottom: "1px solid #000", width: "15%" }}>
+                <tr className="tr">
+                  <td className="tituloDatosBancarios">DATOS BANCARIOS</td>
+                  <tr className="tr datosBancarios noBorderTop noBorderRight">
+                    <td className="td tituloDatosBancarios padding noBorderTop">
                       <label htmlFor="entidad">ENTIDAD</label>
                     </td>
-                    <td
-                      style={{
-                        border: "1px solid #000",
-                        padding: "8px",
-                        borderTop: "none",
-                        borderRight: "none"
-                      }}
-                    >
+                    <td className="td noBorderTop noBorderRight" colSpan="3">
                       <input
                         required
                         type="text"
@@ -145,26 +92,15 @@ const Form2 = () => {
                         name="entidad"
                         value={formData.entidad}
                         onChange={handleChange}
-                        style={{
-                          padding: "2px",
-                          border: "none",
-                          width: "calc(100% - 4px)",
-                          outline: "none"
-                        }}
+                        className="input datosBancarios"
                       />
                     </td>
                   </tr>
-                  <tr>
-                    <td
-                      style={{
-                        padding: "8px",
-                        borderTop: "1px solid #000",
-                        borderBottom: "1px solid #000"
-                      }}
-                    >
+                  <tr className="tr datosBancarios noBorderRight">
+                    <td className="td padding">
                       <label htmlFor="swift">SWIFT</label>
                     </td>
-                    <td style={{ border: "1px solid #000", padding: "8px", borderRight: "none" }}>
+                    <td className="td noBorderRight" colSpan="3">
                       <input
                         required
                         type="text"
@@ -172,26 +108,15 @@ const Form2 = () => {
                         name="swift"
                         value={formData.swift}
                         onChange={handleChange}
-                        style={{
-                          padding: "2px",
-                          border: "none",
-                          width: "calc(100% - 4px)",
-                          outline: "none"
-                        }}
+                        className="input datosBancarios"
                       />
                     </td>
                   </tr>
-                  <tr>
-                    <td
-                      style={{
-                        padding: "8px",
-                        borderTop: "1px solid #000",
-                        borderBottom: "1px solid #000"
-                      }}
-                    >
+                  <tr className="tr datosBancarios noBorderRight">
+                    <td className="td tituloDatosBancarios padding">
                       <label htmlFor="iban">IBAN</label>
                     </td>
-                    <td style={{ border: "1px solid #000", padding: "8px", borderRight: "none" }}>
+                    <td className="td noBorderRight" colSpan="3">
                       <input
                         required
                         type="text"
@@ -199,27 +124,15 @@ const Form2 = () => {
                         name="iban"
                         value={formData.iban}
                         onChange={handleChange}
-                        style={{
-                          padding: "2px",
-                          border: "none",
-                          width: "calc(100% - 4px)",
-                          outline: "none"
-                        }}
+                        className="input datosBancarios"
                       />
                     </td>
                   </tr>
-                  <tr>
-                    <td style={{ padding: "8px", borderTop: "1px solid #000" }}>
+                  <tr className="tr datosBancarios noBorderBottom noBorderRight">
+                    <td className="td tituloDatosBancarios padding noBorderBottom">
                       <label htmlFor="numeroCc">Nº CC</label>
                     </td>
-                    <td
-                      style={{
-                        border: "1px solid #000",
-                        padding: "8px",
-                        borderBottom: "none",
-                        borderRight: "none"
-                      }}
-                    >
+                    <td className="td noBorderBottom noBorderRight" colSpan="3">
                       <input
                         required
                         type="text"
@@ -227,65 +140,37 @@ const Form2 = () => {
                         name="numeroCc"
                         value={formData.numeroCc}
                         onChange={handleChange}
-                        style={{
-                          padding: "2px",
-                          border: "none",
-                          width: "calc(100% - 4px)",
-                          outline: "none"
-                        }}
+                        className="input datosBancarios"
                       />
                     </td>
                   </tr>
-                </td>
-              </tr>
-              <tr>
-                <td colSpan={1} style={{ border: "1px solid #000", padding: "8px" }}>
-                  <label htmlFor="direccionFacturacion">DIRECCIÓN DE FACTURACION</label>
-                </td>
-                <td colSpan={3} style={{ border: "1px solid #000", padding: "8px" }}>
-                  <input
-                    required
-                    type="text"
-                    id="direccionFacturacion"
-                    name="direccionFacturacion"
-                    value={formData.direccionFacturacion}
-                    onChange={handleChange}
-                    style={{
-                      padding: "2px",
-                      border: "none",
-                      width: "calc(100% - 4px)",
-                      outline: "none"
-                    }}
-                  />
-                </td>
-              </tr>
-            </tbody>
-          </table>
-          {errorEnSubmit && (
-            <div style={{ color: "red", display: "flex", justifyContent: "center" }}>
-              Deben rellenarse todos los campos
-            </div>
-          )}
-          <span style={{ display: "flex", justifyContent: "center", alignItems: "center" }}>
-            <button
-              type="submit"
-              style={{
-                display: "flex",
-                justifyContent: "center",
-                alignItems: "center",
-                margin: "10px",
-                border: "1px solid #000",
-                color: "white",
-                backgroundColor: "#04a1e4",
-                padding: "10px",
-                fontFamily: "serif",
-                fontSize: "20px"
-              }}
-            >
-              Siguiente
-            </button>
-          </span>
-        </form>
+                </tr>
+                <tr className="tr">
+                  <td className="td tituloDatosBancarios">
+                    <label htmlFor="direccionFacturacion">DIRECCIÓN DE FACTURACION</label>
+                  </td>
+                  <td className="td">
+                    <input
+                      required
+                      type="text"
+                      id="direccionFacturacion"
+                      name="direccionFacturacion"
+                      value={formData.direccionFacturacion}
+                      onChange={handleChange}
+                      className="input direccionFacturacion"
+                    />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+            {errorEnSubmit && <div className="error">Deben rellenarse todos los campos</div>}
+            <span className="buttonContainer">
+              <button className="button" type="submit">
+                Siguiente
+              </button>
+            </span>
+          </form>
+        </div>
       </div>
     </div>
   );

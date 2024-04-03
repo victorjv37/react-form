@@ -3,16 +3,13 @@
    font-family: serif;
 }
 
-.table {
-   width: 75%;
-}
-
-th, td {
+.th, .td, .tr, .tbody, .thead {
    border: 1px solid black;
 }
 
-tr {
-   border-top: 1px solid black;
+.input {
+   outline: none;
+   border: none;
 }
 
 .button {
@@ -40,19 +37,79 @@ tr {
    align-items: center;
 }
 
-._container {
-   height: 100%;
+.mainContainer {
+   display: flex;
+   justify-content: center;
+   margin-top: 160px;
+}
+
+.buttonContainer {
+   display: flex;
+   justify-content: center;
 }
 
 .error {
-   font-size: 0.75em;
+   font-size: 1em;
    color: red;
-   padding: 0.25px;
-   margin: 0.25px;
-   max-width: 27vh;
+   display: flex;
+   justify-content: center;
+   margin-top: 2px;
 }
 
 .header {
    display: flex;
    justify-content: space-between;
+}
+
+.tableHeader {
+   background-color: #04a1e4;
+   text-align: center;
+}
+
+.padding {
+   padding: 8px;
+}
+
+.tituloDatosBancarios {
+   width: 23%;
+}
+
+.displayNone {
+   display: none;
+}
+
+input.datosBancarios {
+   padding: 7px;
+}
+
+input.direccionFacturacion {
+   padding: 12px;
+}
+
+#container {
+   height: 100%;
+   width: 70%;
+}
+
+#counter {
+   position: relative;
+   right: 37px;
+   font-size: 18px;
+   color: #04a1e4;
+}
+
+#datosBancarios {
+   padding: 0%;
+}
+
+.noBorderTop {
+   border-top: 0px;
+}
+
+.noBorderBottom {
+   border-bottom: 0px;
+}
+
+.noBorderRight {
+   border-right: 0px;
 }
