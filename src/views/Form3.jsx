@@ -454,7 +454,8 @@ const Form3 = () => {
                       </td>
                     </tr>
                     <tr className="tr noBorderLeft noBorderBottom noBorderRight" id="caeRows">
-                      <td>
+                      <td className="td noBorderLeft noBorderTop noBorderBottom caeData">
+                        {" "}
                         <label htmlFor="caeNombre2"></label>
                         <input
                           className="input"
@@ -465,7 +466,7 @@ const Form3 = () => {
                           onChange={handleChange}
                         />
                       </td>
-                      <td>
+                      <td className="td noBorderLeft noBorderTop noBorderBottom caeData">
                         <label htmlFor="caeTelefono2"></label>
                         <input
                           className="input"
@@ -476,7 +477,7 @@ const Form3 = () => {
                           onChange={handleChange}
                         />
                       </td>
-                      <td>
+                      <td className="td noBorderRight noBorderTop noBorderBottom caeData">
                         <label htmlFor="caeEmail2"></label>
                         <input
                           className="input"
