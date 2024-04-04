@@ -1,8 +1,131 @@
-.form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+#root {
+   font-family: serif;
 }
-._container{
-    
+
+.th, .td, .tr, .tbody, .thead {
+   border: 1px solid black;
+}
+
+.input {
+   outline: none;
+   border: none;
+}
+
+.button {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   margin: 10px;
+   border: 1px solid #000;
+   color: white;
+   background-color: #04a1e4;
+   padding: 10px;
+   font-family: serif;
+   font-size: 20px;
+}
+
+.form {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.centered {
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.mainContainer {
+   display: flex;
+   justify-content: center;
+   margin-top: 35px;
+}
+
+.buttonContainer {
+   display: flex;
+   justify-content: center;
+}
+
+.error {
+   font-size: 1em;
+   color: red;
+   display: flex;
+   justify-content: center;
+   margin-top: 2px;
+}
+
+.header {
+   display: flex;
+   justify-content: space-between;
+}
+
+.tableHeader {
+   background-color: #04a1e4;
+   text-align: center;
+}
+
+.padding {
+   padding: 8px;
+}
+
+.tituloDatosBancarios {
+   width: 1%;
+}
+
+.displayNone {
+   display: none;
+}
+
+.caeData {
+   width: 15rem;
+}
+
+input.datosBancarios {
+   padding: 7px;
+}
+
+input.direccionFacturacion {
+   padding: 12px;
+}
+
+#container {
+   height: 100%;
+   width: 70%;
+   max-width: 1028px;
+}
+
+#counter {
+   position: relative;
+   right: 35px;
+   font-size: 18px;
+   color: #04a1e4;
+}
+
+#datosBancarios {
+   padding: 0%;
+}
+
+#cae {
+   padding: 0px;
+}
+
+#caeRows {
+   height: 33px;
+}
+
+.noBorderTop {
+   border-top: 0px;
+}
+
+.noBorderBottom {
+   border-bottom: 0px;
+}
+
+.noBorderRight {
+   border-right: 0px;
+}
+
+.noBorderLeft {
+   border-left: 0px;
 }

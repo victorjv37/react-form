@@ -1,7 +1,7 @@
-import UserForm from "./views/UserForm";
+import Form1 from "./views/Form1";
 
 const App = () => {
-  return <UserForm />;
+  return <Form1 />;
 };
 
 export default App;
