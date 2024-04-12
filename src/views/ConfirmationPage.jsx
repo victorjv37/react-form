@@ -8,7 +8,7 @@ const ConfirmationPage = () => {
         <div id="container">
           <Header />
           <h4 style={{ textAlign: "center", color: "green", marginTop: "30vh" }}>
-            Formularios enviados con éxito
+            Formulario enviado con éxito
           </h4>
         </div>
       </div>
