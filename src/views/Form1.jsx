@@ -78,7 +78,7 @@ const Form1 = () => {
             <table className="table">
               <tbody className="tbody">
                 <th className="tableHeader" colSpan={4}>
-                  <label style={{ backgroundColor: "#04a1e4", color: "white" }} htmlFor="titulo">
+                  <label style={{ backgroundColor: "#41B6E6", color: "white" }} htmlFor="titulo">
                     <strong>1. DATOS GENERALES DE LA EMPRESA*</strong>
                   </label>
                 </th>

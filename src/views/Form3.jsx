@@ -56,7 +56,7 @@ const Form3 = () => {
     } else {
       setErrorEnSubmit(false);
       console.log("Datos enviados:", formData);
-      navigate("/form-4");
+      navigate("/confirmation-page");
     }
     console.log(errorEnSubmit);
   };
@@ -86,8 +86,8 @@ const Form3 = () => {
               styles={buildStyles({
                 textSize: "30px",
                 pathTransitionDuration: 0.5,
-                pathColor: "#04a1e4",
-                textColor: "#04a1e4",
+                pathColor: "#41B6E6",
+                textColor: "#41B6E6",
                 trailColor: "#black"
               })}
             />
@@ -98,10 +98,10 @@ const Form3 = () => {
         </div>
         <div>
           <form onSubmit={handleSubmit} onInvalid={handleInvalid}>
-            <table style={{ marginBottom: "0px" }} className="table">
+            <table style={{ marginBottom: "0px" }} className="table tableContactos">
               <tr className="tr">
                 <th className="tableHeader" colSpan={4}>
-                  <label style={{ backgroundColor: "#04a1e4", color: "white" }} htmlFor="titulo">
+                  <label style={{ backgroundColor: "#41B6E6", color: "white" }} htmlFor="titulo">
                     <strong>3. CONTACTOS*</strong>
                   </label>
                 </th>
@@ -419,7 +419,7 @@ const Form3 = () => {
                   </td>
                   <td colSpan={3} id="cae">
                     <tr className="tr noBorderLeft noBorderTop noBorderRight" id="caeRows">
-                      <td className="td noBorderLeft noBorderTop noBorderBottom caeData">
+                      <td className="td noBorderLeft noBorderTop noBorderBottom caeData paddingRight">
                         <label htmlFor="caeNombre1"></label>
                         <input
                           className="input"
@@ -430,7 +430,7 @@ const Form3 = () => {
                           onChange={handleChange}
                         />
                       </td>
-                      <td className="td noBorderLeft noBorderTop noBorderBottom caeData">
+                      <td className="td noBorderLeft noBorderTop noBorderBottom caeData paddingRight">
                         <label htmlFor="caeTelefono1"></label>
                         <input
                           className="input"
@@ -441,7 +441,7 @@ const Form3 = () => {
                           onChange={handleChange}
                         />
                       </td>
-                      <td className="td noBorderRight noBorderTop noBorderBottom caeData">
+                      <td className="td noBorderRight noBorderTop noBorderBottom caeData paddingRight">
                         <label htmlFor="caeEmail1"></label>
                         <input
                           className="input"
@@ -454,7 +454,7 @@ const Form3 = () => {
                       </td>
                     </tr>
                     <tr className="tr noBorderLeft noBorderBottom noBorderRight" id="caeRows">
-                      <td className="td noBorderLeft noBorderTop noBorderBottom caeData">
+                      <td className="td noBorderLeft noBorderTop noBorderBottom caeData paddingRight">
                         {" "}
                         <label htmlFor="caeNombre2"></label>
                         <input
@@ -466,7 +466,7 @@ const Form3 = () => {
                           onChange={handleChange}
                         />
                       </td>
-                      <td className="td noBorderLeft noBorderTop noBorderBottom caeData">
+                      <td className="td noBorderLeft noBorderTop noBorderBottom caeData paddingRight">
                         <label htmlFor="caeTelefono2"></label>
                         <input
                           className="input"
@@ -477,7 +477,7 @@ const Form3 = () => {
                           onChange={handleChange}
                         />
                       </td>
-                      <td className="td noBorderRight noBorderTop noBorderBottom caeData">
+                      <td className="td noBorderRight noBorderTop noBorderBottom caeData paddingRight">
                         <label htmlFor="caeEmail2"></label>
                         <input
                           className="input"

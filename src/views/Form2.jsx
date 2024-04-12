@@ -10,8 +10,7 @@ const Form2 = () => {
     entidad: "",
     swift: "",
     iban: "",
-    numeroCc: "",
-    direccionFacturacion: ""
+    numeroCc: ""
   });
   const navigate = useNavigate();
 
@@ -71,10 +70,10 @@ const Form2 = () => {
         </div>
         <div>
           <form onSubmit={handleSubmit} onInvalid={handleInvalid}>
-            <table className="table" style={{ marginBottom: "0px" }}>
+            <table className="table tableDatosBancarios" style={{ marginBottom: "0px" }}>
               <tbody className="tbody">
                 <th colSpan={4} className="tableHeader">
-                  <label style={{ backgroundColor: "#04a1e4", color: "white" }} htmlFor="titulo">
+                  <label style={{ backgroundColor: "#41B6E6", color: "white" }} htmlFor="titulo">
                     <strong>2. CONDICIONES DE PAGO Y FACTURACIÓN*</strong>
                   </label>
                 </th>
@@ -146,22 +145,6 @@ const Form2 = () => {
                       />
                     </td>
                   </tr>
-                </tr>
-                <tr className="tr">
-                  <td className="td tituloDatosBancarios">
-                    <label htmlFor="direccionFacturacion">DIRECCIÓN DE FACTURACION</label>
-                  </td>
-                  <td className="td">
-                    <input
-                      required
-                      type="text"
-                      id="direccionFacturacion"
-                      name="direccionFacturacion"
-                      value={formData.direccionFacturacion}
-                      onChange={handleChange}
-                      className="input direccionFacturacion"
-                    />
-                  </td>
                 </tr>
               </tbody>
             </table>

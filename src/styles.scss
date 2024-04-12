@@ -1,14 +1,29 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
 #root {
-   font-family: serif;
+    font-family: 'Roboto', sans-serif;
 }
 
 .th, .td, .tr, .tbody, .thead {
-   border: 1px solid black;
+   border: 1px solid #939393;
+}
+
+.table {
+   height: 60vh;
+}
+
+.tableDatosBancarios {
+   height: 43vh;
+}
+
+.tableContactos {
+   height: 75vh;
 }
 
 .input {
    outline: none;
    border: none;
+   width: 100%;
 }
 
 .button {
@@ -16,9 +31,9 @@
    justify-content: center;
    align-items: center;
    margin: 10px;
-   border: 1px solid #000;
+   border: 1px solid #939393;
    color: white;
-   background-color: #04a1e4;
+   background-color: #41B6E6;
    padding: 10px;
    font-family: serif;
    font-size: 20px;
@@ -34,6 +49,10 @@
    display: flex;
    flex-direction: column;
    align-items: center;
+}
+
+.datosBancarios {
+   height: 5.5rem;
 }
 
 .mainContainer {
@@ -61,7 +80,7 @@
 }
 
 .tableHeader {
-   background-color: #04a1e4;
+   background-color: #41B6E6;
    text-align: center;
 }
 
@@ -78,15 +97,18 @@
 }
 
 .caeData {
-   width: 15rem;
+   height: 7vh;
 }
 
 input.datosBancarios {
    padding: 7px;
+   height: 2rem;
 }
 
 input.direccionFacturacion {
    padding: 12px;
+   padding-right: 1px;
+   height: 2rem;
 }
 
 #container {
@@ -99,7 +121,7 @@ input.direccionFacturacion {
    position: relative;
    right: 35px;
    font-size: 18px;
-   color: #04a1e4;
+   color: #41B6E6;
 }
 
 #datosBancarios {
@@ -108,10 +130,11 @@ input.direccionFacturacion {
 
 #cae {
    padding: 0px;
+   height: 14vh;
 }
 
 #caeRows {
-   height: 33px;
+   height: 3rem;
 }
 
 .noBorderTop {
@@ -128,4 +151,8 @@ input.direccionFacturacion {
 
 .noBorderLeft {
    border-left: 0px;
+}
+
+.paddingRight {
+   width: 14rem;
 }
